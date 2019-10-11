@@ -1,0 +1,1 @@
+This is a demo how use ITK to read dicom data and generate a image by opencv.
