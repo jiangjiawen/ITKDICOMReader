@@ -8,10 +8,10 @@
 int main(int argc, char *argv[])
 {
 
-    if (argc < 2)
+    if (argc < 3)
     {
         std::cerr << "Usage: " << std::endl;
-        std::cerr << argv[0] << " DicomImage\n";
+        std::cerr << argv[0] << " DicomImage Savepng\n";
         return EXIT_FAILURE;
     }
 
@@ -83,7 +83,7 @@ int main(int argc, char *argv[])
 
     // cv::Mat img = itk::itkOpenCVImageBridge::ITKImageToCVMat<InputImageType>(reader->GetOutput());
 
-    cv::imwrite("test2.png", out);
+    cv::imwrite(argv[2], out);
 
     return EXIT_SUCCESS;
 }
